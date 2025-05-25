@@ -61,6 +61,20 @@ public class Realistic {
         return result; // smallest element
     } // method getSmallest
 
+    /**
+     * Add a value to the end of the array by creating a new, larger array.
+     * 
+     * @param value the value to be added at the end of the array
+     */
+    public static void add(int value) {
+        int[] newArr = new int[arr.length + 1];
+        for (int i = 0; i < arr.length; i++) {
+            newArr[i] = arr[i];
+        }
+        newArr[newArr.length - 1] = value; // add the new value to the end
+        arr = newArr; // update arr to point to the new array
+    }
+
     /** Driver/simple test code */
     public static void main(String[] args) {
         System.out.printf("\n\nArray before removal of smallest element: %s",
